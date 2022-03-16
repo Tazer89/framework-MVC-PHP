@@ -72,7 +72,7 @@
         * Método responsável por enviar a resposta para o usuário
         */
         public function sendResponse(){
-            $this->sendHeaders();
+            /*$this->sendHeaders();*/
             
             switch($this->contentType){
                 case 'text/html':

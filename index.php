@@ -4,7 +4,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use App\DotEnv\Environment;
 use \App\Http\Router;
-use \App\Utils\View;
+use \App\Utils\Twig;
 
 use App\DatabaseManager\Database;
 use App\DatabaseManager\Pagination;
@@ -16,7 +16,7 @@ Environment::load(__DIR__);
 define('URL', getenv('URL'));
 
 /* Defini o valor padrão das variáveis */
-View::init([
+Twig::init([
     'URL' => URL,
 ]);
 

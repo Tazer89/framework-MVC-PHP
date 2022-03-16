@@ -12,7 +12,6 @@
         }
     ],
     "require": {
-        "william-costa/dot-env": "^0.1.0",
-        "william-costa/database-manager": "0.1.0"
+        "twig/twig": "^3.0"
     }
 }

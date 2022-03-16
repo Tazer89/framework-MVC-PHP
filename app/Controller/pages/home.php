@@ -1,7 +1,7 @@
 <?php
     namespace App\Controller\Pages;
 
-    use \App\Utils\View;
+    use \App\Utils\Twig;
     use \App\Model\Entity\Organization;
 
     class Home extends Page{
@@ -10,15 +10,15 @@
             
             $obOrganization = new Organization;
             
-            $content = View::render('pages/home', [
+            $params = array(
+                'url' => URL,
                 'title' => 'MVC Mode - by Lucas Giovanni',
                 'name' => $obOrganization->name,
                 'description' => $obOrganization->description,
                 'site' => $obOrganization->site,
-            ]);
-            
-            /* Retorna a view da página */
-            return parent::getPage('MVC Mode - by Lucas Giovanni', $content);
+            );
+            $tag = '.html.twig';
+            echo Twig::render('home.html.twig', $params);
         }
         
     }
