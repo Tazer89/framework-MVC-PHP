@@ -6,7 +6,9 @@
     class Page{
         
         private static function getHeader(){
-            return View::render('pages/header');
+            return View::render('pages/header', [
+                'title' => 'MVC',
+            ]);
         }
         
         private static function getFooter(){

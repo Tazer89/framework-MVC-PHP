@@ -2,10 +2,18 @@
 
 require __DIR__.'/vendor/autoload.php';
 
+use App\DotEnv\Environment;
 use \App\Http\Router;
 use \App\Utils\View;
 
-define('URL', 'http://127.0.0.1/2023/mvc');
+use App\DatabaseManager\Database;
+use App\DatabaseManager\Pagination;
+
+/* Carrega variáveis de ambiente */
+Environment::load(__DIR__);
+
+/* Define a constante de URL do projeto */
+define('URL', getenv('URL'));
 
 /* Defini o valor padrão das variáveis */
 View::init([

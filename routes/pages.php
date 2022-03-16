@@ -11,14 +11,14 @@ $obRouter->get('/', [
 ]);
 
 /* Rota SOBRE */
-$obRouter->get('/sobre', [
+$obRouter->get('/about', [
     function(){
         return new Response(200, Pages\About::getAbout());
     }
 ]);
 
 /* Rota DINÂMICA */
-$obRouter->get('/user/{idPage}/{action}', [
+$obRouter->get('/paginas/{idPage}/{action}', [
     function($idPage, $action){
         return new Response(200, 'Página'.$idPage.' - '.$action);
     }
