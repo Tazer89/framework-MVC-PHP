@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<section id="page_header">
+			<div class="border-bottom mb-3">
+				<h1 class="p-2">Depoimentos</h1>
+			</div>
+		</section>
+		<section id="depoimentos">
+			{{items}}
+
+			{{pagination}}
+		</section>
+		<section id="form_depoimentos">
+			<div class="card mb-3">
+				<h3 class="card-header">Envie seu depoimento</h3>
+				<div class="card-body">
+					<form method="post" action="?page=1">
+						<div class="mb-3">
+							<label for="input_name" class="form-label">Nome</label>
+							<input type="text" class="form-control" id="input_name" name="input_name" required>
+						</div>
+						<div class="mb-3">
+							<label for="input_msg" class="form-label">Mensagem</label>
+							<textarea class="form-control" id="input_msg" name="input_msg" rows="3" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-success">Enviar Depoimento</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+

@@ -1,17 +1,14 @@
 {
-    "name": "mode/mvc-mode",
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Lucas Giovanni",
-            "email": "contato@lucasgiovanni.com"
-        }
-    ],
-    "require": {
-        "twig/twig": "^3.0"
+  "name": "lucas/mvc-lucas",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
     }
+  },
+  "authors": [
+    {
+      "name": "Lucas Giovanni",
+      "email": "contato@lucasgiovanni.com"
+    }
+  ]
 }

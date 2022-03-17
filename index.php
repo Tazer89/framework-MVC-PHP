@@ -1,31 +1,16 @@
 <?php
+	require __DIR__.'/includes/app.php';
 
-require __DIR__.'/vendor/autoload.php';
+	use \App\Http\Router;
 
-use App\DotEnv\Environment;
-use \App\Http\Router;
-use \App\Utils\Twig;
+	// Inicia o router
+	$obRouter = new Router(URL);
 
-use App\DatabaseManager\Database;
-use App\DatabaseManager\Pagination;
+	// Inclui as rotas das páginas
+	include __DIR__.'/routes/pages.php';
 
-/* Carrega variáveis de ambiente */
-Environment::load(__DIR__);
+	// Inclui as rotas do painel admin
+	include __DIR__.'/routes/admin.php';
 
-/* Define a constante de URL do projeto */
-define('URL', getenv('URL'));
-
-/* Defini o valor padrão das variáveis */
-Twig::init([
-    'URL' => URL,
-]);
-
-/* Inicia o router */
-$obRouter = new Router(URL);
-
-/* Inclui as rotas de páginas */
-include __DIR__.'/routes/pages.php';
-
-/* Imprimir o response da rota */
-$obRouter->run()
-    ->sendResponse();
+	// Imprimi o response da rota
+	$obRouter->run()->sendResponse();

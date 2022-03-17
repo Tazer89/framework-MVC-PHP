@@ -4,28 +4,9 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6293e386475f0cd18e9c202f1b88103a
+class ComposerStaticInit582513570736e0e8d567875ea263cc91
 {
-    public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'W' => 
-        array (
-            'WilliamCosta\\DotEnv\\' => 20,
-            'WilliamCosta\\DatabaseManager\\' => 29,
-        ),
-        'T' => 
-        array (
-            'Twig\\' => 5,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Ctype\\' => 23,
-        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -33,26 +14,6 @@ class ComposerStaticInit6293e386475f0cd18e9c202f1b88103a
     );
 
     public static $prefixDirsPsr4 = array (
-        'WilliamCosta\\DotEnv\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/william-costa/dot-env/src',
-        ),
-        'WilliamCosta\\DatabaseManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/william-costa/database-manager/src',
-        ),
-        'Twig\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/twig/twig/src',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -66,9 +27,9 @@ class ComposerStaticInit6293e386475f0cd18e9c202f1b88103a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6293e386475f0cd18e9c202f1b88103a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6293e386475f0cd18e9c202f1b88103a::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6293e386475f0cd18e9c202f1b88103a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit582513570736e0e8d567875ea263cc91::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit582513570736e0e8d567875ea263cc91::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit582513570736e0e8d567875ea263cc91::$classMap;
 
         }, null, ClassLoader::class);
     }
